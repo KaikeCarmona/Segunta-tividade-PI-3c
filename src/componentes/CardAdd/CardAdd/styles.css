@@ -1,0 +1,71 @@
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(36, 53, 56, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60vh;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 40%;
+}
+
+.AddCard {
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: start;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.AddCard form {
+  display: flex;
+  flex-direction: row;
+}
+
+.AddCard form input {
+  width: 80%;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.AddCard form button {
+  width: 20%;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: blueviolet;
+  color: #fff;
+}
+
+.AddCard form button:hover {
+    
+}
+
+
+.cardView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
