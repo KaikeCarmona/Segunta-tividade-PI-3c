@@ -1,71 +1,129 @@
-body {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    180deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(36, 53, 56, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
+/* Estilo geral do container */
 #container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 60vh;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f4f8;
 }
 
+/* Estilo do container principal */
 .container2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-  width: 40%;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
 }
 
+/* Título */
+h1 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Seção de adicionar tarefa */
 .AddCard {
-  font-family: Arial, Helvetica, sans-serif;
-  align-items: start;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 20px;
 }
 
-.AddCard form {
+form {
   display: flex;
-  flex-direction: row;
+  gap: 10px;
 }
 
-.AddCard form input {
-  width: 80%;
-  border: none;
+/* Estilo do input */
+input[type="text"] {
+  flex: 1;
   padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Estilo do botão de adicionar */
+button[type="submit"] {
+  background-color: #6328a7;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.AddCard form button {
-  width: 20%;
-  border: 1px solid black;
-  cursor: pointer;
-  background-color: blueviolet;
-  color: #fff;
+button[type="submit"]:hover {
+  background-color: #351869;
 }
 
-.AddCard form button:hover {
-    
-}
-
-
-.cardView {
+/* Estilo dos cartões de tarefas */
+#cardView {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+#cardView:hover {
+  background-color: #e9ecef;
+}
+
+/* Texto da tarefa */
+#cardView p {
+  flex: 1;
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  overflow-wrap: anywhere; /* Para quebrar longas palavras */
+}
+
+/* Texto riscado para tarefas concluídas */
+.completed {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+/* Estilo dos inputs dentro do card */
+.inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Estilo do checkbox */
+.inputs input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Estilo do botão de remover */
+.inputs button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #dc3545;
+  transition: color 0.3s;
+}
+
+.inputs button:hover {
+  color: #c82333;
 }

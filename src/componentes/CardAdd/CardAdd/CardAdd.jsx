@@ -6,19 +6,28 @@ export default function Card() {
   const [inputValue, setInputValue] = useState("");
   const [atividadeArray, setAtividadeArray] = useState([]);
 
+  
   const handleChange = (e) => {
     setInputValue(e.target.value);
   };
 
-  //salva os dados do formulario dentro do array atividadeArray   
+  //salva os dados do formulario dentro do array atividadeArray
   const handleSave = () => {
+    // Verifica se o input está vazio ou contém apenas espaços
+    if (inputValue.trim()=== "") {
+      alert("Por favor, digite o nome da atividade."); // Mensagem opcional
+      return; // Para a execução da função se o input estiver vazio
+    }
+
     const newAtividade = {
       name: inputValue,
       checked: false, // Inicialmente desmarcado
     };
+
     setAtividadeArray([...atividadeArray, newAtividade]);
     setInputValue("");
   };
+
   const toggleCheckbox = (index) => {
     const newArray = atividadeArray.map((atividade, i) => {
       if (i === index) {

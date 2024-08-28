@@ -3,7 +3,7 @@ import "./styles.css";
 export default function CardView({ name, checked, onRemove, onToggle }) {
   return (
     <div id="cardView">
-      <p>{name}</p>
+      <p className={checked ? "completed" : ""}>{name}</p> {/* Adiciona classe 'completed' quando a tarefa estiver concluída, se não, continua a mesma coisa */}
       <div className="inputs">
         <input
           type="checkbox"
